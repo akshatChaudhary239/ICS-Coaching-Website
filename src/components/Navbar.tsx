@@ -23,8 +23,8 @@ const Navbar = () => {
             <span className="text-primary-foreground font-heading font-bold text-lg">I</span>
           </div>
           <div className="leading-tight">
-            <span className="font-heading font-bold text-foreground text-base">ICS Coaching</span>
-            <span className="block text-[10px] text-muted-foreground -mt-0.5">Sonipat</span>
+            <span className="font-heading font-bold text-foreground text-base">yYour Coaching</span>
+            <span className="block text-[10px] text-muted-foreground -mt-0.5">Dehradun</span>
           </div>
         </Link>
 
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <a href="tel:+919876543210" className="flex items-center gap-1.5 text-sm font-medium text-primary">
             <Phone className="w-4 h-4" />
-            98765 43210
+            9834xxxxx
           </a>
           <Button asChild>
             <Link to="/book-demo">Book Free Demo</Link>
