@@ -1,71 +1,91 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Trophy, BookOpen } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { ArrowRight } from "lucide-react";
+import heroBg from "@/assets/Screenshot 2026-02-16 060840.png";
 
-const stats = [
-  { icon: Trophy, value: "10,000+", label: "Selections" },
-  { icon: Users, value: "50,000+", label: "Students Trained" },
-  { icon: BookOpen, value: "15+", label: "Years Experience" },
-];
+const HeroSection = () => {
+  return (
+    <section className="relative overflow-hidden bg-[#f7faf9]">
+      {/* Decorative background shapes */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute w-72 h-72 bg-accent/10 rounded-full -top-20 -left-20 blur-3xl" />
+        <div className="absolute w-80 h-80 bg-primary/10 rounded-full bottom-0 right-0 blur-3xl" />
+      </div>
 
-const HeroSection = () => (
-  <section className="relative overflow-hidden">
-    {/* Background */}
-    <div className="absolute inset-0">
-      <img src={heroBg} alt="ICS Coaching students" className="w-full h-full object-cover" loading="eager" />
-      <div className="absolute inset-0 bg-hero opacity-85" />
-    </div>
+      <div className="relative container section-padding py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        
+        {/* LEFT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="inline-block border-blue-500 text-black border border-accent/20 text-xs font-semibold px-3 py-1.5 rounded-full mb-5">
+            🏆 Trusted Govt Exam Coaching in Sonipat
+          </span>
 
-    <div className="relative container section-padding py-20 md:py-28 lg:py-32">
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="max-w-2xl"
-      >
-        <span className="inline-block bg-accent/20 text-accent-foreground backdrop-blur-sm border border-accent/30 text-xs font-semibold px-3 py-1.5 rounded-full mb-5">
-          🏆 Sonipat's #1 Govt. Exam Coaching
-        </span>
+          <h1 className="text-3xl md:text-5xl font-heading font-extrabold text-gray-900 leading-tight mb-6">
+            Your Government Job <br />
+            <span className="text-blue-800">Journey Starts Here</span>
+          </h1>
 
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary-foreground leading-tight mb-5">
-          Your Government Job <br className="hidden md:block" />
-          <span className="text-accent">Starts Here.</span>
-        </h1>
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
+            Prepare for SSC, HSSC, CET, Banking, Police and Teacher exams with expert mentors, 
+            structured study plans and proven results.
+          </p>
 
-        <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
-          Expert coaching for SSC, HSSC, CET, Banking, Police & Teacher exams. Join thousands of successful candidates.
-        </p>
+          <div className="flex flex-wrap gap-3">
+            <Button
+              size="lg"
+              className="bg-blue-800 text-white hover:bg-blue-500 font-semibold"
+              asChild
+            >
+              <Link to="/courses">
+                Explore Courses <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
 
-        <div className="flex flex-wrap gap-3 mb-12">
-          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold" asChild>
-            <Link to="/courses">
-              Explore Courses <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
-          </Button>
-          <Button size="lg" className="bg-primary-foreground/15 text-primary-foreground border border-primary-foreground/30 hover:bg-primary-foreground/25 font-semibold" asChild>
-            <Link to="/book-demo">Book Free Demo</Link>
-          </Button>
-        </div>
+            <Button size="lg" variant="outline"   className="font-semibold text-black hover:text-black hover:bg-gray-300 hover:border-gray-300 transition-colors"
+  asChild
+>
+              <Link to="/book-demo">Book Free Demo</Link>
+            </Button>
+          </div>
+        </motion.div>
 
-        {/* Stats */}
-        <div className="flex flex-wrap gap-6 md:gap-10">
-          {stats.map((s) => (
-            <div key={s.label} className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center">
-                <s.icon className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <p className="font-heading font-bold text-primary-foreground text-lg">{s.value}</p>
-                <p className="text-primary-foreground/60 text-xs">{s.label}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-    </div>
-  </section>
-);
+        {/* RIGHT IMAGE */}
+{/* RIGHT IMAGE */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7 }}
+  className="relative w-full h-[420px] md:h-[520px] lg:h-[600px]"
+>
+  {/* Decorative shapes */}
+  <div className="absolute -top-10 -right-10 w-40 h-40 border-2 border-accent/40 rounded-full" />
+  <div className="absolute -bottom-10 -left-10 w-32 h-32 border-2 border-primary/40 rounded-full" />
+
+  {/* Image */}
+  <div className="absolute inset-0 rounded-[40px] overflow-hidden shadow-xl border border-gray-200">
+    <img
+      src={heroBg}
+      alt="Government exam students studying"
+      className="w-full h-full object-cover"
+      loading="eager"
+    />
+  </div>
+
+  {/* Floating badge */}
+  <div className="absolute bottom-6 right-6 bg-white shadow-lg rounded-xl px-5 py-3 border">
+    <p className="text-xs text-gray-500">Selections</p>
+    <p className="font-bold text-accent text-lg">10,000+</p>
+  </div>
+</motion.div>
+
+      </div>
+    </section>
+  );
+};
 
 export default HeroSection;

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { Shield, BookOpen, Landmark, Banknote, GraduationCap, Siren } from "lucide-react";
 
 const categories = [
-  { icon: BookOpen, label: "SSC", desc: "CGL, CHSL, MTS, GD", color: "bg-primary/10 text-primary" },
+  { icon: BookOpen, label: "UPSC", desc: "CGL, CHSL, MTS, GD", color: "bg-primary/10 text-primary" },
   { icon: Landmark, label: "HSSC", desc: "Group C & D Exams", color: "bg-success/10 text-success" },
   { icon: GraduationCap, label: "CET", desc: "Haryana Common Entrance", color: "bg-accent/10 text-accent" },
-  { icon: Banknote, label: "Banking", desc: "PO, Clerk, SO", color: "bg-primary/10 text-primary" },
+{ icon: BookOpen, label: "SSC", desc: "CGL, CHSL, MTS, GD", color: "bg-primary/10 text-primary" },
   { icon: Siren, label: "Police", desc: "Haryana & Central", color: "bg-destructive/10 text-destructive" },
   { icon: Shield, label: "Teacher", desc: "TET, HTET, CTET", color: "bg-success/10 text-success" },
 ];
